@@ -1,0 +1,16 @@
+APPS = [
+    'org.onosproject.hostprovider',
+    'org.onosproject.lldpprovider',
+    'org.onosproject.openflow-base',
+    'org.onosproject.drivers.sdwn-drivers',
+]
+
+onos_app (
+    app_name = 'org.onosproject.openflow',
+    title = 'OpenFlow Meta App',
+    category = 'Provider',
+    url = 'http://onosproject.org',
+    description = 'OpenFlow southbound meta application.',
+    included_bundles = [ '//utils/osgi:onlab-osgi' ],  # FIXME to allow hollow oar files
+    required_apps = APPS,
+)

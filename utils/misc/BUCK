@@ -1,0 +1,16 @@
+COMPILE_DEPS = [
+    '//lib:COMPILE',
+]
+
+osgi_jar_with_tests(
+    name = 'onlab-misc',
+    deps = COMPILE_DEPS,
+    package_name_root = 'org.onlab',
+    visibility = [
+		'//drivers/sdwn:onos-drivers-sdwn',
+		'//protocols/openflow/api:onos-protocols-openflow-api',
+		'//core/api:onos-api',
+		'//providers/sdwnhost:onos-providers-sdwnhost','PUBLIC'],
+)
+
+
